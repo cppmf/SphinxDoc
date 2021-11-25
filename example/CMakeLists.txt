@@ -92,16 +92,16 @@ sphinx_add_docs(
   OUTPUT_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/html/amunra"
 )
 sphinx_add_docs(
-        ${PROJECT_NAME}_material_sphinx_doc
-        BREATHE_PROJECTS ${PROJECT_NAME}_doxygen
-        BUILDER html
-        SOURCE_DIRECTORY "docs/material"
-        OUTPUT_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/html/material"
+  ${PROJECT_NAME}_material_sphinx_doc
+  BREATHE_PROJECTS ${PROJECT_NAME}_doxygen
+  BUILDER html
+  SOURCE_DIRECTORY "docs/material"
+  OUTPUT_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/html/material"
 )
 sphinx_add_docs(
-        ${PROJECT_NAME}_rtd_sphinx_doc
-        BREATHE_PROJECTS ${PROJECT_NAME}_doxygen
-        BUILDER html
-        SOURCE_DIRECTORY "docs/rtd"
-        OUTPUT_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/html/rtd"
+  ${PROJECT_NAME}_rtd_sphinx_doc
+  BREATHE_PROJECTS ${PROJECT_NAME}_doxygen
+  BUILDER html
+  SOURCE_DIRECTORY "docs/rtd"
+  OUTPUT_DIRECTORY "${CMAKE_CURRENT_LIST_DIR}/html/rtd"
 )

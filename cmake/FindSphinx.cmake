@@ -272,7 +272,7 @@ endfunction()
 
 
 function(_Sphinx_update_confpy _sourcedir _cachedir)
-  message("---------------- _Sphinx_update_confpy ---------------------")
+
   if(NOT DEFINED SPHINX_PROJECT)
     set(SPHINX_PROJECT ${PROJECT_NAME})
   endif()
@@ -306,7 +306,6 @@ function(_Sphinx_update_confpy _sourcedir _cachedir)
   string(REGEX REPLACE "language = '[a-zA-Z ]+'" "language = '${SPHINX_LANGUAGE}'" CONFIG_PY "${CONFIG_PY}")
   file(WRITE "${_cachedir}/conf.py" "${CONFIG_PY}")
 
-          message("------------------------------------------------------------")
 endfunction()
 
 function(sphinx_add_docs _target)
@@ -328,8 +327,7 @@ function(sphinx_add_docs _target)
       set(_sourcedir "${_args_SOURCE_DIRECTORY}")
     endif()
     if(NOT IS_DIRECTORY "${_sourcedir}")
-      message(FATAL_ERROR "Sphinx source directory '${_sourcedir}' for"
-              "target ${_target} does not exist")
+      message(FATAL_ERROR "Sphinx source directory '${_sourcedir}' for target ${_target} does not exist")
     endif()
   endif()
 
